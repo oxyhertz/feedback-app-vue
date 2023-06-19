@@ -1,0 +1,38 @@
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .buttons {
+    margin-top: 2rem;
+    button {
+      font-size: 1.5rem;
+      padding: 15px 30px;
+      outline: none;
+      border: none;
+      background-color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .btn-yes {
+      margin-inline-end: 50px;
+      background-color: rgb(41, 183, 67);
+      color: white;
+      border: 1px solid white;
+      &:hover {
+        background-color: white;
+        color: rgb(41, 183, 67);
+        border-color: rgb(41, 183, 67);
+      }
+    }
+
+    .btn-no {
+      border: 1px solid rgba(255, 0, 0, 0);
+
+      &:hover {
+        border: 1px solid red;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  .img-container {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+  }
+
+  svg {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .lang-dropdown {
+    position: absolute;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 229px;
+    bottom: -257px;
+    right: 0;
+    padding: 50px;
+    gap: 25px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    z-index: 10;
+    border-radius: 11px;
+    background-color: rgb(221 221 221 / 47%);
+    backdrop-filter: blur(10px);
+    & > div {
+      flex-basis: 33.33%;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
