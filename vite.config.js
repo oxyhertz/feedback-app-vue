@@ -8,19 +8,19 @@ export default defineConfig({
     VitePWA({
       manifest: {
         name: 'Customer Survey',
+        icons: [
+          {
+            src: './icons/logo48.png',
+            sizes: '48x48',
+            type: 'image/png',
+          },
+          {
+            src: './icons/logo144.png',
+            sizes: '144x144',
+            type: 'image/png',
+          },
+        ],
       },
-      icons: [
-        {
-          src: './icons/logo48.png',
-          sizes: '48x48',
-          type: 'image/png',
-        },
-        {
-          src: './icons/logo144.png',
-          sizes: '144x144',
-          type: 'image/png',
-        },
-      ],
     }),
   ],
 })
