@@ -4,6 +4,7 @@ export const store = Vuex.createStore({
   strict: true,
   state: {
     userStaus: null,
+    lang: { id: 4, lang: 'עברית', flag: 'israel' },
     surveys: [],
     currStage: 1,
     statuses: [
@@ -44,6 +45,9 @@ export const store = Vuex.createStore({
       const surveysCopy = JSON.parse(JSON.stringify(surveys))
       return surveysCopy.sort((a, b) => b.createdAt - a.createdAt)
     },
+    lang({ lang }) {
+      return lang
+    },
   },
   mutations: {
     addSurvey(state, { survey }) {
@@ -58,6 +62,9 @@ export const store = Vuex.createStore({
     setCurrStage(state, { stage }) {
       console.log('payload:', stage)
       state.currStage = stage
+    },
+    setLang(state, { flag }) {
+      state.lang = flag
     },
   },
   actions: {
