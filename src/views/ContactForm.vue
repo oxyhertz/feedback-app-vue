@@ -12,7 +12,9 @@
             <div>
                 <input type="text" placeholder="מספר טלפון">
             </div>
-            <button>שלח</button>
+            <button>
+                <h2>שלח</h2>
+            </button>
         </form>
     </section>
 </template>

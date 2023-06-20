@@ -1,11 +1,9 @@
 
 
 <template>
-  <AppHeader />
-  <main>
-    <Transition>
-      <RouterView />
-    </Transition>
+  <AppHeader v-if="!isDashboard" />
+  <main :class="{ 'align-main': !isDashboard }">
+    <RouterView />
   </main>
 </template>
 
@@ -13,21 +11,33 @@
 import AppHeader from './cmps/AppHeader.vue';
 
 export default {
+  created() {
+    this.$store.dispatch({ type: 'loadSurveys' })
+  },
+  computed: {
+    isDashboard() {
+      return this.$route.path === '/dashboard';
+    },
+  },
   components: {
     AppHeader,
   },
 }
 
 </script>
-
 <style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
+.align-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
 }
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+.align-main h1 {
+  font-size: 7rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  direction: rtl;
+  padding: 0 50px;
 }
 </style>

@@ -1,8 +1,9 @@
 <template>
     <section class="lang-dropdown">
 
-        <div v-for="flag in flags" :key="flag.id" @click="$emit('selectFlag')">
-            <img :src="`/icons/${flag.flag}.png`" alt="">
+        <div class="flag-wrapper" v-for="flag in flags" :key="flag.id" @click="$emit('selectFlag', flag)">
+            <span>{{ flag.lang }}</span>
+            <img :src="`/flags/${flag.flag}.png`" alt="">
         </div>
 
     </section>
@@ -13,9 +14,10 @@ export default {
     data() {
         return {
             flags: [
-                { id: 1, lang: 'en', flag: 'united-states' },
-                { id: 3, lang: 'ar', flag: 'uae' },
-                { id: 5, lang: 'ru', flag: 'russia' },
+                { id: 1, lang: 'אנגלית', flag: 'usa', },
+                { id: 3, lang: 'ערבית', flag: 'uae' },
+                { id: 5, lang: 'רוסית', flag: 'russia' },
+                { id: 4, lang: 'עברית', flag: 'israel' },
             ]
         }
     },
