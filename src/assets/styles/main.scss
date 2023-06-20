@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 // Basics
 @import 'basics/base';
+@import 'basics/typography';
 
 // Views
 @import 'views/home';
 @import 'views/contact';
 @import 'views/contact-form';
+@import 'views/dashboard';
 
 // Components
 @import 'cmps/app-header';
 @import 'cmps/msg';
+
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

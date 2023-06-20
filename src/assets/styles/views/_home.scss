@@ -2,6 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  color: white;
+  margin-top: 100px;
+  text-align: center;
+
+  h1 {
+    font-size: 7rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .icons-container {
@@ -15,6 +24,12 @@
     cursor: pointer;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
+    // width: 30%;
+    svg {
+      filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+      height: 100%;
+      width: 100%;
+    }
     &:hover {
       opacity: 0.8;
     }

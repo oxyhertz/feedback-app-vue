@@ -3,8 +3,21 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: white;
+  text-align: center;
+  h1 {
+    font-size: 5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  & > h1 {
+    padding: 50px;
+  }
   .buttons {
     margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
     button {
       font-size: 1.5rem;
       padding: 15px 30px;
@@ -15,23 +28,33 @@
       cursor: pointer;
     }
 
+    h1 {
+      text-align: center;
+      text-shadow: none;
+      // margin: 0;/
+      margin-bottom: 0;
+      line-height: 1.4;
+    }
+
     .btn-yes {
       margin-inline-end: 50px;
-      background-color: rgb(41, 183, 67);
+      background-color: rgba(17, 24, 39, 1);
       color: white;
-      border: 1px solid white;
+      padding: 15px 200px;
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 20px;
       &:hover {
-        background-color: white;
-        color: rgb(41, 183, 67);
-        border-color: rgb(41, 183, 67);
+        opacity: 0.8;
       }
     }
 
     .btn-no {
-      border: 1px solid rgba(255, 0, 0, 0);
-
-      &:hover {
-        border: 1px solid red;
+      color: rgba(156, 163, 175, 1);
+      background-color: transparent;
+      h1 {
+        color: rgb(156, 162, 174);
+        font-weight: 600;
       }
     }
   }
