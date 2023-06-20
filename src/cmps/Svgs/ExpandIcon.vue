@@ -1,31 +1,8 @@
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" width="56px" height="56px" viewBox="0 0 24 24">
-
-        <title />
-
-        <g id="Complete">
-
-            <g id="expand">
-
-                <g>
-
-                    <polyline data-name="Right" fill="none" id="Right-2" points="3 17.3 3 21 6.7 21" stroke="#000000"
-                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-
-                    <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        x1="10" x2="3.8" y1="14" y2="20.2" />
-
-                    <line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        x1="14" x2="20.2" y1="10" y2="3.8" />
-
-                    <polyline data-name="Right" fill="none" id="Right-3" points="21 6.7 21 3 17.3 3" stroke="#000000"
-                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-
-                </g>
-
-            </g>
-
+    <svg xmlns="http://www.w3.org/2000/svg" width="56px" height="56px" viewBox="0 0 24 24" fill="none">
+        <g id="Arrow / Expand">
+            <path id="Vector" d="M10 19H5V14M14 5H19V10" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
         </g>
-
     </svg>
 </template>
