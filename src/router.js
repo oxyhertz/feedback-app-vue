@@ -3,7 +3,7 @@ import Home from './views/Home.vue'
 import Contact from './views/Contact.vue'
 import ContactForm from './views/ContactForm.vue'
 import Msg from './views/Msg.vue'
-
+import Dashboard from './views/Dashboard.vue'
 const routes = [
   {
     path: '/',
@@ -24,6 +24,11 @@ const routes = [
     path: '/msg',
     name: 'Msg',
     component: Msg,
+  },
+  {
+    path: '/dashboard',
+    name: 'dashboard',
+    component: Dashboard,
   },
 ]
 
