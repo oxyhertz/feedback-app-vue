@@ -169,7 +169,7 @@ body {
   display: flex;
   gap: 20px;
   margin-bottom: 26px;
-
+  flex-wrap: wrap;
   .bar-chart {
     flex-basis: 41.66666667%;
   }

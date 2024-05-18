@@ -83,6 +83,17 @@ export default {
                     enabled: true,
                     mode: "index",
                     intersect: false,
+                    // backgroundColor: '#000',
+                    // callbacks: {
+                    //     label: function (context) {
+                    //         var label = context.dataset.label || '';
+                    //         if (label) {
+                    //             label += ': ';
+                    //         }
+                    //         label += '$' + context.parsed.y;
+                    //         return label;
+                    //     }
+                    // }
                 },
                 scales: {
                     y: {

@@ -16,7 +16,7 @@ export default {
             return {
                 height: `210px`,
                 position: 'relative',
-                'background-image': 'linear - gradient(to right, #00369E, #005CFD, #A18DFF)',
+                'background-image': 'linear - gradient(to right, #6a8c74, #86b293, #415747)',
                 // width: '100%',
             }
         }
@@ -30,10 +30,12 @@ export default {
     data() {
         return {
             chartData: {
-                labels: ["01", "02", "03", "04", "05", "06", "07", "08", "09"],
+                labels: ["בניה לא חוקית", "גניבה", "זיהום", "פלישה", "שימוש חורג",],
 
 
-                datasets: [{ data: [850, 600, 500, 620, 900, 500, 900, 630, 900] }]
+                datasets: [{
+                    data: [850, 600, 500, 620, 900],
+                }]
             },
             chartOptions: {
                 backgroundColor: '#fff',
@@ -105,13 +107,17 @@ export default {
         }
     }
 }
+// backgroundColor: ['#334d40', '#a4c1b0', '#2c4033', '#b2ccbb', '#22342a', '#6a8c74', '#86b293'], // Specific colors for each bar
+// backgroundColor: ['#6a8c74', '#86b293', '#415747', '#5e8070', '#97b0a4', '#3e5542', '#768f83'], // Specific colors for each bar
+
+
 </script>
 
 <style>
 #my-chart-id {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, .12);
-    background-image: linear-gradient(90deg, #00369e, #005cfd, #a18dff);
+    background-image: linear-gradient(90deg, #6a8c74, #86b293, #415747);
 }
 </style>
 
