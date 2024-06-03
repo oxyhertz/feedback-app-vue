@@ -16,7 +16,7 @@ export default {
             return {
                 height: `210px`,
                 position: 'relative',
-                'background-image': 'linear - gradient(to right, #6a8c74, #86b293, #415747)',
+                'background-image': 'linear - gradient(to right, #6a8c74, #86bd96, #415747)',
                 // width: '100%',
             }
         }
@@ -66,12 +66,15 @@ export default {
                 },
                 scales: {
                     y: {
+                        border: {
+                            dash: [5, 5],
+                            display: true,
+                            offset: 6,
+                        },
                         grid: {
                             display: true,
                             color: "rgba(255, 255, 255, .2)",
                             zeroLineColor: "#ffffff",
-                            borderDash: [6],
-                            borderDashOffset: [6],
                         },
                         ticks: {
                             suggestedMin: 0,
