@@ -3,7 +3,7 @@
 <template>
   <AppHeader v-if="!isDashboard" />
   <main :class="{ 'align-main': !isDashboard }">
-    <RouterView />
+    <RouterView :data="{ name: 'test', cars: [], isReal: false }" @prop-update="(data) => console.log('it works', data)" />
   </main>
 </template>
 

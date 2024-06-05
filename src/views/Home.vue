@@ -7,21 +7,38 @@
                 </component>
             </div>
         </div>
+        <input type="text" v-model="dataCopy.title">
     </section>
 </template>
+
+
 <script>
+
 import { surveyService } from '../services/survey.service.local';
 import DissapointedFaceIcon from '../cmps/svgs/DissapointedFaceIcon.vue';
 import HappyFaceIcon from '../cmps/svgs/HappyFaceIcon.vue';
 import NeutralFaceIcon from '../cmps/svgs/NeutralFaceIcon.vue';
+import usePropVmodel from '../composables/usePropVmodel';
+
 export default {
+    emits: ['prop-update'],
+    setup({ data }, context) {
+        const dataCopy = usePropVmodel(data, context);
+        return {
+            dataCopy
+        }
+    },
+    props: {
+        data: Object
+    },
     data() {
         return {
             surveyToAdd: surveyService.getEmptySurvey()
         }
     },
-    created() {
+    mounted() {
         this.$store.commit({ type: 'setCurrStage', stage: 1 });
+
     },
     methods: {
         selectStatus(status) {
@@ -55,3 +72,4 @@ export default {
     },
 }
 </script>
+
